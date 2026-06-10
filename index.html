@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>INFERNO-93 v2 — FPS retrô</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>INFERNO-93</h1><span>v2 // três fases · quatro armas · um devorador</span></header>
+<div id="shell"><canvas id="tela" width="320" height="208"></canvas></div>
+<footer><b>WASD</b> mover · <b>←→</b>/mouse girar · <b>segurar clique</b>/<b>espaço</b> atirar · <b>1-4</b>/<b>Q</b> trocar arma · <b>P</b> pausar · <b>R</b> reiniciar — celular: esquerda move, direita mira, botões FOGO/ARMA/II</footer>
+
+<!-- A ordem dos scripts importa: cada módulo depende dos anteriores -->
+<script src="js/config.js"></script>
+<script src="js/niveis.js"></script>
+<script src="js/texturas.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/estado.js"></script>
+<script src="js/fisica.js"></script>
+<script src="js/armas.js"></script>
+<script src="js/logica.js"></script>
+<script src="js/render.js"></script>
+<script src="js/entrada.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

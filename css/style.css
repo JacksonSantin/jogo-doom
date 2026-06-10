@@ -1,0 +1,27 @@
+/* INFERNO-93 v2 — estilo da página e moldura CRT */
+:root{ --sangue:#b3122e; --osso:#e8e0cc; --breu:#0a0908; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:var(--breu);overflow:hidden}
+body{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  font-family:"Courier New",monospace;color:var(--osso);
+  background:radial-gradient(ellipse at 50% 120%, #1c0b08 0%, var(--breu) 60%);
+}
+header{display:flex;align-items:baseline;gap:14px;letter-spacing:.35em;user-select:none}
+header h1{font-size:18px;color:var(--sangue);text-shadow:0 0 12px rgba(179,18,46,.7)}
+header span{font-size:10px;color:#6e675a;letter-spacing:.2em}
+#shell{position:relative;line-height:0;border:2px solid #1f1c19;box-shadow:0 0 40px rgba(255,60,20,.12), inset 0 0 60px rgba(0,0,0,.6)}
+canvas{
+  width:min(96vw, 160vh, 960px);
+  image-rendering:pixelated;image-rendering:crisp-edges;
+  touch-action:none;cursor:crosshair;display:block;
+}
+/* scanlines de CRT */
+#shell::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px);
+  mix-blend-mode:multiply;
+}
+footer{font-size:10px;color:#6e675a;letter-spacing:.1em;text-align:center;user-select:none;padding:0 12px;max-width:960px}
+footer b{color:#a89d86}
+@media (max-height:560px){header,footer{display:none}}
